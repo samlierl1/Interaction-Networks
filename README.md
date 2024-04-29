@@ -215,6 +215,7 @@ Adding poss handlings ensures that possessive modifiers like "my" are correctly 
  
 <br>
 <br>
+
 ## 3. Cleaning up False Positives: Removing *anyone, people, nobody, anybody* as entities and removing overlapping entities:
 
 ***Precision:*** 0.825		<br>    ***Recall:*** 0.56410 <br>   ***F1:*** 0.670051
@@ -229,6 +230,7 @@ In the previous version of Double Hop, a connection between ***She*** and ***peo
  
 <br>
 <br>
+
 ## 4. Allowing an extra hop if the first word in the hopping process is labelled as a 'prep' (preposition) or 'xcomp' (open clausal complement).
 ***Precision:*** 0.79412		<br>    ***Recall:*** 0.69231 <br>   ***F1:*** 0.73973
 
