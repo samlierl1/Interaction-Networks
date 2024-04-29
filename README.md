@@ -149,6 +149,24 @@ The doublehop function is an extension of the singlehop function, designed to id
 ### Examples:
 
 
+> * ***Ryan(nsubj)*** led ***him(dobj)*** into the kitchen.*
+
+<div align="center">
+   <img width="304" alt="Entities Visualizer" src="https://github.com/samlierl1/Interaction-Networks/assets/74319676/fe0a0be8-b506-4bd7-a3ad-8a164ac7c7db" >
+    <br>
+    <p><i>Finds the entities from the .entities file</i></p>
+</div>
+
+<div align="center">
+   <img width="304" alt="Entities Visualizer" src="https://github.com/samlierl1/Interaction-Networks/assets/74319676/bf24fac0-ea7c-4f14-8efd-ccf3bbe263f1" >
+    <br>
+    <p><i>Makes the connection between Ryan(nsubj) and him(dobj) since their syntactic head ID's lead to the same verb (single hop). </i></p>
+</div>
+
+
+<br>
+
+
 >*And on the bridge , after we met the dinosaurs , the Dark Oculator fled not because **she** recognized **me** — but because **she** recognized **you** .*
 
 In this example, the connections between ***she(nsubj)*** and ***you***/***me(dobjs)*** are successfully made. In both cases, the syntactic head ID's of ***she(nsubj)*** and  ***you***/***me(dobjs)*** connect to **recognized** which is why the connections are made. 
