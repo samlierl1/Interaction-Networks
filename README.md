@@ -119,35 +119,7 @@ In this example, the connection between ***An elderly philologist*** and ***Tcha
 The singlehop function designed to extract relationships between entities based on their syntactic roles within a sentence, specifically focusing on connections between subjects(nsubjs) and direct objects (dobj) that share the same verb. The function first maps token IDs to their corresponding coreference labels, enabling identification of entities. It then filters entities that are subjects and objects based on these roles and checks if they share a common verb by comparing their syntactic head IDs. This function only performs one "hop" between syntactic head ID's and thus only finds direct connections between entities.
 
 
-### Examples:
-
->*Brandy laughed , and **Hannah** hushed **her** .*
-
-In this example, the connection between ***Hannah*** and ***her*** (Brandy) is successfully made. 
-
-<br>
-
->***I** don’t think a **team member** reports back to **anyone** , even if it’s to the **admiral** , unless it’s to investigate the team itself .*
-
-In this example, the model struggles with differentiating "hypothetical" interactions. Connections are incorrectly made between ***I*** and ***anyone***/***admiral*** as well as ***team member*** and ***anyone***/***admiral***. 
-
-<br>
-
->***You** looked up , uneasily , and casually pulled a notebook over the essay , as if to hide the evidence from **Tom** .*
-
-In this example, the connection between ***You*** and ***Tom***
-is correctly made. This is an example that Double Hop struggles with due to the longer distance between the two entities. 
-<br>
-<br>
-
-
-## Basic Double Hop:
-***Precision:*** 0.76623 <br>    ***Recall:*** 0.50427	 <br>   ***F1:*** 0.60824
-
-The doublehop function is an extension of the singlehop function, designed to identify more complex relationships between entities by considering a second layer of connections beyond the immediate syntactic roles. Like singlehop, it identifies subjects (nsubj) and but this time also includes objects (dobj, pobj) based on their dependency relations and filters for entities listed in a coreference database. Unlike the singlehop function the function now considers pobjs as objects. After establishing a direct connection between subjects and objects sharing the same verb, doublehop looks further by exploring potential secondary relationships. Specifically, it checks if any prepositional object (pobj) directly connected to a verb has a subsequent link back to the main verb shared with the subject, thus forming a double hop. This approach enables the function to capture not just direct actions but also related actions or states that involve the subject. 
-
-### Examples:
-
+### Example:
 
 > * ***Ryan(nsubj)*** led ***him(dobj)*** into the kitchen.*
 
@@ -163,8 +135,16 @@ The doublehop function is an extension of the singlehop function, designed to id
     <p><i>Makes the connection between Ryan(nsubj) and him(dobj) since their syntactic head ID's lead to the same verb (single hop). </i></p>
 </div>
 
-
 <br>
+<br>
+
+
+## Basic Double Hop:
+***Precision:*** 0.76623 <br>    ***Recall:*** 0.50427	 <br>   ***F1:*** 0.60824
+
+The doublehop function is an extension of the singlehop function, designed to identify more complex relationships between entities by considering a second layer of connections beyond the immediate syntactic roles. Like singlehop, it identifies subjects (nsubj) and but this time also includes objects (dobj, pobj) based on their dependency relations and filters for entities listed in a coreference database. Unlike the singlehop function the function now considers pobjs as objects. After establishing a direct connection between subjects and objects sharing the same verb, doublehop looks further by exploring potential secondary relationships. Specifically, it checks if any prepositional object (pobj) directly connected to a verb has a subsequent link back to the main verb shared with the subject, thus forming a double hop. This approach enables the function to capture not just direct actions but also related actions or states that involve the subject. 
+
+### Examples:
 
 
 >*And on the bridge , after we met the dinosaurs , the Dark Oculator fled not because **she** recognized **me** — but because **she** recognized **you** .*
