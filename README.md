@@ -23,7 +23,8 @@ The algorithms then match the end tokens from the .entities file with the tokens
     <p><i>Example of BookNLP .tokens file</i></p>
 </div>
 
-The algorithms then find the entities that are subjects(nsubj) or objects(dobj, pobj). What's considered an object can change depending on the algorithm.
+The hopping algorithms then find the entities that are subjects(nsubj) or objects(dobj, pobj). What's considered an object can change depending on the hopping algorithm. The cooccurence network matches all the entities in the sentence at this step. 
+
 
 <div align="center">
   <img width="469" alt="Screenshot 2024-04-29 at 3 42 16 AM" src="https://github.com/samlierl1/Interaction-Networks/assets/74319676/02678ba6-bfa3-40dd-abc2-96fbc248b0e5">
