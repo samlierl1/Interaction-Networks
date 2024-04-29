@@ -57,8 +57,6 @@ After finding the connections, all algorithms output a dataframe in the followin
 ## Basic Co-occurrence  Network:
 ***Precision:*** 0.21839 <br>    ***Recall:*** 0.97436 <br>   ***F1:*** 0.35681 
 
-TP: 114 FP: 408 FN: 3
-
 The function extracts and pairs all unique entities from a given sentence, ensuring each pair consists of entities with different coreference labels. This process is done by using combinations of entity tuples, each containing a word and its coreference label. Pairs with the same coreference label are discarded to focus only on relationships between distinct entities. Unlike the other network building methods, this one non-directional and has undirected edges (i.e., entity A co-occurring with entity B is equivalent to entity B co-occurring with entity A).
 
 
