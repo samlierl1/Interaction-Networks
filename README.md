@@ -17,7 +17,6 @@ All algorithms start by extracting the end tokens of entities from the .entities
 
 The algorithms then match the end tokens from the .entities file with the tokens in the .tokens file.
 
-
 <div align="center">
   <img width="475" alt="Screenshot 2024-04-29 at 3 41 37 AM" src="https://github.com/samlierl1/Interaction-Networks/assets/74319676/6ea6d258-6d9a-4cca-b2f5-b0fde8c92f27">
     <br>
@@ -25,8 +24,6 @@ The algorithms then match the end tokens from the .entities file with the tokens
 </div>
 
 The algorithms then find the entities that are subjects(nsubj) or objects(dobj, pobj). What's considered an object can change depending on the algorithm.
-
-
 
 <div align="center">
   <img width="469" alt="Screenshot 2024-04-29 at 3 42 16 AM" src="https://github.com/samlierl1/Interaction-Networks/assets/74319676/02678ba6-bfa3-40dd-abc2-96fbc248b0e5">
@@ -36,7 +33,7 @@ The algorithms then find the entities that are subjects(nsubj) or objects(dobj, 
 
 
 
-Then the algorithms iterate through the objects and perform "hops". It goes through each objects syntactic head ID to find any subjects they connect to.
+The hopping algorithms iterate through the objects and perform "hops". They go through each objects syntactic head ID's to find any subjects they connect to.
 <div align="center">
   <img src="https://github.com/samlierl1/Interaction-Networks/assets/74319676/0439dfdc-c8be-42b9-b950-e9f5af88565b" alt="Dependency Visualization">
     <br>
@@ -46,7 +43,6 @@ Then the algorithms iterate through the objects and perform "hops". It goes thro
 
 
 After finding the connections, all algorithms output a dataframe in the following format:
-
 
 <div align="center">
  <img width="400" alt="Screenshot 2024-04-29 at 4 17 51 AM" src="https://github.com/samlierl1/Interaction-Networks/assets/74319676/3722428d-1ba9-4138-8869-f71da3e5a5fd">
